@@ -13,17 +13,44 @@
   </head>
   <body>
 
-    <header>
-      <a href="http://www.dn.se">DN</a>
-      <a href="/start" class="pop">Start</a>
-      <a href="/spel" class="pop">Spel</a>
-      <a href="/kontakt" class="pop">Kontakt</a>
-    </header>
-
-    <main>
-    
-    </main>
-
+    <div class="container">
+      <div class="row">
+        <div class="result">
+            <form name="calc">
+              <input type="text" class="screen text-right" name="display" id="display" readonly>
+            </form>
+        </div>
+      </div>
+      <div class="row">
+        <button id="reset">AC</button>
+        <button id="plusminus">&#177;</button>
+        <button id="percentage">%</button>
+        <button id="divide">/</button>
+      </div>
+      <div class="row">
+        <button id="7" data-value="7">7</button>
+        <button id="8" data-value="8">8</button>
+        <button id="9" data-value="9">9</button>
+        <button id="multiply">X</button>
+      </div>
+      <div class="row">
+        <button id="4" data-value="4">4</button>
+        <button id="5" data-value="5">5</button>
+        <button id="6" data-value="6">6</button>
+        <button id="subtract">-</button>
+      </div>
+      <div class="row">
+        <button id="1" data-value="1">1</button>
+        <button id="2" data-value="2">2</button>
+        <button id="3" data-value="3">3</button>
+        <button id="add">+</button>
+      </div>
+      <div class="row">
+        <button id="0">0</button>
+        <button id="comma">,</button>
+        <button id="equals">=</button>
+      </div>
+    </div>
 
     <!-- JavaScript libraries -->
     <script src="/jsonflex.js"></script>

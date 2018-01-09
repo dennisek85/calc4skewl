@@ -1,40 +1,76 @@
-$(document).on('click', 'a.pop', function(e){
+let calc = 0;
 
-    // Create a push state event
-    let href = $(this).attr('href');
-    history.pushState(null, null, href);
-
-    changePage();
-
-    //stop browser from reloading page
-    e.preventDefault();
-
-});
-
-function changePage () {
-    
-    let url = location.pathname;
-
-    $('header a').removeClass('active');
-    $(`header a[href="${url}"]`).addClass('active');
-    
-    if(url == '/'){
-        $('main').html('Du är på startsidan!');
-    }
-
-    if(url == '/spel'){
-        $('main').html('Du vill spela ett spel!');
-    }
-
-    if(url == '/kontakt'){
-        $('main').html('Här finns kontaktsidan!');
-    }
+function render(){
+    $('#display').val(calc);
 }
 
-//call changePage on initial page load
+$(document).on('click', '#1', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
 
-changePage();
+$(document).on('click', '#2', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
 
-//call changePage on popevents
+$(document).on('click', '#3', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
 
-window.addEventListener('popstate', changePage);
+$(document).on('click', '#4', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
+
+$(document).on('click', '#5', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
+
+$(document).on('click', '#6', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
+
+$(document).on('click', '#7', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
+
+$(document).on('click', '#8', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
+
+$(document).on('click', '#9', function() {
+    let value = $(this).data('value');
+    calc = value;
+    $('#display').val(calc);
+    render();
+})
+
+$(document).on('click', '#reset', function() {
+    calc = 0;
+    $('#display').val(calc);
+    render();
+})
+
+render();
